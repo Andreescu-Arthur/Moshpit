@@ -4,7 +4,7 @@ Moshpit is a simple photo-sharing mobile app where people can post pictures and 
 
 ---
 
-## Domain details (entities to be persisted)
+## Domain details
 Below are the application entities that will be stored. 
 
 ### 1) `User`
