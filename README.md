@@ -5,12 +5,12 @@ Moshpit is a simple photo-sharing mobile app where people can post pictures and 
 ---
 
 ## Domain details (entities to be persisted)
-Below are the application entities that will be stored. Each field includes a description.
+Below are the application entities that will be stored. 
 
 ### 1) `User`
 - **userId** (string / UUID) — unique identifier for the user.
 - **username** (string) — public display name.
-- **email** (string) — contact email (used for account recovery).
+- **email** (string) — contact email .
 - **profilePictureUrl** (string) — URL pointing to profile photo.
 - **bio** (string) — short user bio.
 - **createdAt** (datetime) — account creation time.
@@ -19,13 +19,12 @@ Below are the application entities that will be stored. Each field includes a de
 ### 2) `Post`
 - **postId** (string / UUID) — unique post identifier.
 - **userId** (string) — the author’s userId.
-- **imageUrl** (string) — URL for the uploaded image (or local path if pending).
+- **imageUrl** (string) — URL for the uploaded image.
 - **caption** (string) — user-entered text for the post.
 - **likesCount** (integer) — cached number of likes.
 - **commentsCount** (integer) — cached number of comments.
 - **createdAt** (datetime) — time post was created.
-- **syncStatus** (enum) — `pending | uploading | synced | failed` (used for offline/queueing).
-
+- **syncStatus** (enum) — `pending | uploading | synced | failed`.
 ### 3) `Comment`
 - **commentId** (string / UUID) — comment identifier.
 - **postId** (string) — parent post id.
@@ -50,7 +49,7 @@ Below are the application entities that will be stored. Each field includes a de
 
 ---
 
-## CRUD operations (detailed per entity)
+## CRUD operations 
 
 ### Entity: `Post`
 - **Create (Add Post)**  
