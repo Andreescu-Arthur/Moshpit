@@ -108,7 +108,7 @@ Which CRUD ops are persisted locally and on the server.
 - **Sync policy**:
   - Local writes are enqueued in a local `sync_queue` table with `actionType`, `payload`, `attempts`, `createdAt`.  
   - Background sync worker retries every N seconds while online.  
-  - On successful server response, local record is updated (server IDs replaced if needed) and `sync_queue` entry removed.
+  - On successful server response, local record is updated and `sync_queue` entry removed.
 
 ---
 
